@@ -19,5 +19,3 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
-
-console.log(1);
