@@ -172,7 +172,7 @@ const ProductDetail: FC = () => {
                     max={product.stock}
                     value={quantity}
                     onChange={handleQuantityChange}
-                    className="w-12 text-center py-1 focus:outline-none"
+                    className="w-12 text-center py-1 focus:outline-none bg-white text-gray-800"
                   />
                   <button
                     onClick={incrementQuantity}

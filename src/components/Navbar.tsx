@@ -12,30 +12,40 @@ const Navbar: FC = () => {
     <nav className="bg-indigo-600 text-white shadow-md">
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-xl sm:text-2xl font-bold">
+          <Link to="/" className="text-xl sm:text-2xl font-bold text-white">
             TechShop
           </Link>
 
           <div className="hidden md:flex space-x-6">
-            <Link to="/" className="hover:text-indigo-200 transition-colors">
+            <Link
+              to="/"
+              className="text-white hover:text-indigo-200 transition-colors font-medium">
               Home
             </Link>
-            <Link to="/" className="hover:text-indigo-200 transition-colors">
+            <Link
+              to="/"
+              className="text-white hover:text-indigo-200 transition-colors font-medium">
               Products
             </Link>
-            <Link to="/" className="hover:text-indigo-200 transition-colors">
+            <Link
+              to="/"
+              className="text-white hover:text-indigo-200 transition-colors font-medium">
               Categories
             </Link>
-            <Link to="/" className="hover:text-indigo-200 transition-colors">
+            <Link
+              to="/"
+              className="text-white hover:text-indigo-200 transition-colors font-medium">
               About
             </Link>
-            <Link to="/" className="hover:text-indigo-200 transition-colors">
+            <Link
+              to="/"
+              className="text-white hover:text-indigo-200 transition-colors font-medium">
               Contact
             </Link>
           </div>
 
           <div className="flex items-center space-x-4">
-            <button className="hover:text-indigo-200 transition-colors">
+            <button className="hover:text-indigo-200 transition-colors bg-transparent p-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 sm:h-6 sm:w-6"
@@ -50,7 +60,7 @@ const Navbar: FC = () => {
                 />
               </svg>
             </button>
-            <button className="hover:text-indigo-200 transition-colors relative">
+            <button className="hover:text-indigo-200 transition-colors relative bg-transparent p-0">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5 sm:h-6 sm:w-6"
@@ -69,7 +79,7 @@ const Navbar: FC = () => {
               </span>
             </button>
             <button
-              className="md:hidden hover:text-indigo-200 transition-colors"
+              className="md:hidden hover:text-indigo-200 transition-colors bg-transparent p-0"
               onClick={toggleMobileMenu}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -98,31 +108,31 @@ const Navbar: FC = () => {
             <div className="flex flex-col space-y-3 mt-3">
               <Link
                 to="/"
-                className="hover:text-indigo-200 transition-colors"
+                className="text-white hover:text-indigo-200 transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}>
                 Home
               </Link>
               <Link
                 to="/"
-                className="hover:text-indigo-200 transition-colors"
+                className="text-white hover:text-indigo-200 transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}>
                 Products
               </Link>
               <Link
                 to="/"
-                className="hover:text-indigo-200 transition-colors"
+                className="text-white hover:text-indigo-200 transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}>
                 Categories
               </Link>
               <Link
                 to="/"
-                className="hover:text-indigo-200 transition-colors"
+                className="text-white hover:text-indigo-200 transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}>
                 About
               </Link>
               <Link
                 to="/"
-                className="hover:text-indigo-200 transition-colors"
+                className="text-white hover:text-indigo-200 transition-colors font-medium"
                 onClick={() => setMobileMenuOpen(false)}>
                 Contact
               </Link>

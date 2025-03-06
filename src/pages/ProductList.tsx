@@ -44,7 +44,7 @@ const ProductList: FC = () => {
             <input
               type="text"
               placeholder="Search products..."
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-gray-800"
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
             />
@@ -66,7 +66,7 @@ const ProductList: FC = () => {
         {/* 分类过滤器 */}
         <div className="w-full sm:w-auto">
           <select
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-white text-gray-800"
             value={selectedCategory}
             onChange={e => setSelectedCategory(e.target.value)}>
             <option value="">All Categories</option>
