@@ -51,7 +51,7 @@ const ProductDetail: FC = () => {
 
   if (loading) {
     return (
-      <div className="container mx-auto px-4 py-8 sm:py-16 flex justify-center">
+      <div className="py-8 sm:py-16 flex justify-center">
         <div className="animate-spin rounded-full h-10 w-10 sm:h-12 sm:w-12 border-t-2 border-b-2 border-indigo-500"></div>
       </div>
     );
@@ -59,7 +59,7 @@ const ProductDetail: FC = () => {
 
   if (!product) {
     return (
-      <div className="container mx-auto px-4 py-8 sm:py-16 text-center">
+      <div className="py-8 sm:py-16 text-center">
         <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4">
           Product Not Found
         </h2>
@@ -74,7 +74,7 @@ const ProductDetail: FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-6 sm:py-8 max-w-full">
+    <div className="py-6 sm:py-8">
       {/* 面包屑导航 */}
       <div className="text-sm text-gray-500 mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap pb-2">
         <Link to="/" className="hover:text-indigo-600">

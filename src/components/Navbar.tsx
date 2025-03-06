@@ -10,13 +10,13 @@ const Navbar: FC = () => {
 
   return (
     <nav className="bg-indigo-600 text-white shadow-md">
-      <div className="container mx-auto px-4 py-3">
+      <div className="w-full px-6 sm:px-8 md:px-12 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-xl sm:text-2xl font-bold text-white">
             TechShop
           </Link>
 
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-8 lg:space-x-12">
             <Link
               to="/"
               className="text-white hover:text-indigo-200 transition-colors font-medium">
