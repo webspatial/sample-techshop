@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- 完整的背景 - 方形，确保图标是可遮罩的 -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#4f46e5"/>
+
+  <!-- 安全区域内的内容 (中心 80%) - 扩大到安全区域的边缘 -->
+  <g transform="translate(102.4, 102.4) scale(0.8)">
+    <!-- 购物车 - 放大并居中 -->
+    <g transform="translate(0, 50)">
+      <!-- 购物车主体 - 放大 -->
+      <path d="M150 400 L250 150 L850 150 L950 400 L850 650 L250 650 Z" fill="white" stroke="#4f46e5" stroke-width="15"/>
+
+      <!-- 购物车轮子 - 调整位置 -->
+      <circle cx="300" cy="700" r="50" fill="white" stroke="#4f46e5" stroke-width="15"/>
+      <circle cx="800" cy="700" r="50" fill="white" stroke="#4f46e5" stroke-width="15"/>
+
+      <!-- 购物车手柄 - 调整位置 -->
+      <path d="M850 275 L950 275" stroke="white" stroke-width="25" stroke-linecap="round"/>
+    </g>
+
+    <!-- TechShop 文字 - 放大并调整位置 -->
+    <g transform="translate(512, 250)">
+      <text x="0" y="0" font-family="Arial" font-size="120" font-weight="bold" text-anchor="middle" fill="white">TechShop</text>
+    </g>
+  </g>
+</svg>
