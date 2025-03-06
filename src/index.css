@@ -107,6 +107,12 @@ html.is-spatial {
 
   body {
     /* overflow: hidden; */
+    /* min-height: auto; */
+  }
+
+  .scrollable-content {
+    /* height: 100%; */
+    /* overflow-y: auto; */
   }
 
   .main-window {
@@ -123,5 +129,13 @@ html.is-spatial {
     right: 200px;
     --xr-back: 50;
     border-radius: 50px;
+  }
+
+  @layer components {
+    .product-card {
+      /* background: none;
+      box-shadow: none;
+      --xr-background-material: translucent; */
+    }
   }
 }

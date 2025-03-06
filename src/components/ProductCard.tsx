@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({ product }) => {
   return (
-    <div className="product-card h-full flex flex-col">
+    <div enable-xr className="product-card h-full flex flex-col">
       <div className="relative overflow-hidden h-40 sm:h-48">
         <img
           src={product.image}

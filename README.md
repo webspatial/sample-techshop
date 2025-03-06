@@ -6,6 +6,14 @@ pnpm install
 
 ## Development
 
+### For desktop/mobile platforms
+
+```bash
+pnpm dev
+```
+
+### For Vision Pro
+
 Open two terminals and run these two commands in each one:
 
 ```bash
@@ -18,13 +26,21 @@ pnpm dev:avp
 
 ## Distribution
 
+### For desktop/mobile platforms
+
 ```bash
-cp .env.example .env
+pnpm build
 ```
 
-Fill in the Team ID, Username and Password for Apple Developer Program in the .env file.
+### For Vision Pro
 
-Then:
+```bash
+pnpm build
+cp .env.example .env
+# Fill in the Team ID, Username and Password for Apple Developer Program in the .env file.
+```
+
+Then
 
 ```bash
 pnpm build:avp
