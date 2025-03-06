@@ -10,7 +10,12 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen w-full">
       <Navbar />
-      <main enable-xr className="flex-grow w-full main-window">
+      <main
+        enable-xr
+        className={
+          "flex-grow w-full " +
+          (process.env.XR_ENV !== "avp" ? "bg-gray-50" : "main-window")
+        }>
         <div className="container mx-auto px-4 max-w-7xl">{children}</div>
       </main>
       <Footer />

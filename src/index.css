@@ -102,6 +102,26 @@ button:focus-visible {
   }
 }
 
-.main-window {
-  --xr-background-material: translucent;
+html.is-spatial {
+  background-color: transparent;
+
+  body {
+    /* overflow: hidden; */
+  }
+
+  .main-window {
+    --xr-background-material: transparent;
+    position: relative;
+    top: 70px;
+  }
+
+  .navbar {
+    --xr-background-material: translucent;
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    right: 200px;
+    --xr-back: 50;
+    border-radius: 50px;
+  }
 }

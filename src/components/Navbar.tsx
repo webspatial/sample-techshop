@@ -9,7 +9,14 @@ const Navbar: FC = () => {
   };
 
   return (
-    <nav className="bg-indigo-600 text-white shadow-md">
+    <nav
+      enable-xr
+      className={
+        "" +
+        (process.env.XR_ENV !== "avp"
+          ? "bg-indigo-600 flex-grow w-full"
+          : "navbar")
+      }>
       <div className="w-full px-6 sm:px-8 md:px-12 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-xl sm:text-2xl font-bold text-white">
