@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && XR_ENV=avp vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "dev:avp": "dotenv -- webspatial-builder dev --manifest=public/manifest.webspatial.dev.json",
@@ -15,7 +15,7 @@
   "dependencies": {
     "@google/model-viewer": "4.0.0",
     "@webspatial/core-sdk": "0.0.1-alpha",
-    "@webspatial/react-sdk": "0.0.2",
+    "@webspatial/react-sdk": "0.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",

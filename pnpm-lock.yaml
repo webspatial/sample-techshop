@@ -15,8 +15,8 @@ importers:
         specifier: 0.0.1-alpha
         version: 0.0.1-alpha
       '@webspatial/react-sdk':
-        specifier: 0.0.2
-        version: 0.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+        specifier: 0.0.3
+        version: 0.0.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: ^19.0.0
         version: 19.0.0
@@ -1113,8 +1113,8 @@ packages:
   '@webspatial/core-sdk@0.0.1-alpha':
     resolution: {integrity: sha512-HNTOlFj/7BNpZVRhP6UP7DLg+W3Uq4d/VhM5cQzNHUAaBKTMWSZ39/BQoH2brMdmwrIqMF3JiNm+mvRI7i5jaQ==}
 
-  '@webspatial/react-sdk@0.0.2':
-    resolution: {integrity: sha512-u106dh5+ryXbeN/y50PaTievTNEN22mCH+Cd+dguzha6mb5mXhE+jfEsSMcmMi0CD3ZQf69BzbBBjQRa1xViPw==}
+  '@webspatial/react-sdk@0.0.3':
+    resolution: {integrity: sha512-lUuvGmrw4W2pLbL12Ksu9Mui7zEvO9hWL69ghJ+0rL2744JIhnmVsAhZQlN062kZjDPMU4WquoLDPX7ef7WYtw==}
     peerDependencies:
       react: '>=18.0.0'
       react-dom: '>=18.0.0'
@@ -3822,7 +3822,7 @@ snapshots:
     dependencies:
       loglevel: 1.9.2
 
-  '@webspatial/react-sdk@0.0.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
+  '@webspatial/react-sdk@0.0.3(react-dom@19.0.0(react@19.0.0))(react@19.0.0)':
     dependencies:
       '@google/model-viewer': 4.0.0(three@0.170.0)
       '@types/three': 0.170.0

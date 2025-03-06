@@ -1,9 +1,9 @@
 {
-  "id": "webspatial.techshop.com",
+  "id": "https://webspatial.techshop.com",
   "name": "TechShop - Premium Tech Products",
   "short_name": "TechShop",
   "description": "Shop for premium tech products online",
-  "start_url": "/",
+  "start_url": "index.avp.html",
   "scope": "/",
   "display": "standalone",
   "background_color": "#ffffff",
