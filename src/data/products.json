@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "price": 129.99,
+    "description": "Premium wireless headphones with noise cancellation, 30-hour battery life, and comfortable over-ear design. Perfect for music lovers and professionals alike.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "category": "Electronics",
+    "rating": 4.8,
+    "stock": 15
+  },
+  {
+    "id": 2,
+    "name": "Smart Fitness Watch",
+    "price": 89.99,
+    "description": "Track your fitness goals with this advanced smartwatch featuring heart rate monitoring, sleep tracking, and water resistance up to 50 meters.",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "category": "Wearables",
+    "rating": 4.5,
+    "stock": 20
+  },
+  {
+    "id": 3,
+    "name": "Portable Bluetooth Speaker",
+    "price": 59.99,
+    "description": "Compact yet powerful Bluetooth speaker with 12 hours of playtime, waterproof design, and rich, immersive sound for indoor and outdoor use.",
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "category": "Electronics",
+    "rating": 4.2,
+    "stock": 8
+  },
+  {
+    "id": 4,
+    "name": "Ultra HD 4K Monitor",
+    "price": 349.99,
+    "description": "Experience stunning visuals with this 27-inch 4K monitor featuring HDR support, wide color gamut, and ergonomic design for comfortable viewing.",
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "category": "Electronics",
+    "rating": 4.7,
+    "stock": 5
+  },
+  {
+    "id": 5,
+    "name": "Leather Laptop Bag",
+    "price": 79.99,
+    "description": "Stylish and durable genuine leather laptop bag with multiple compartments, padded laptop sleeve, and adjustable shoulder strap.",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "category": "Accessories",
+    "rating": 4.4,
+    "stock": 12
+  },
+  {
+    "id": 6,
+    "name": "Mechanical Gaming Keyboard",
+    "price": 119.99,
+    "description": "Professional gaming keyboard with mechanical switches, customizable RGB lighting, and programmable macro keys for the ultimate gaming experience.",
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "category": "Gaming",
+    "rating": 4.6,
+    "stock": 10
+  },
+  {
+    "id": 7,
+    "name": "Wireless Charging Pad",
+    "price": 29.99,
+    "description": "Fast wireless charging pad compatible with all Qi-enabled devices. Sleek, compact design with LED indicator and non-slip surface.",
+    "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "category": "Electronics",
+    "rating": 4.3,
+    "stock": 25
+  },
+  {
+    "id": 8,
+    "name": "Smart Home Security Camera",
+    "price": 149.99,
+    "description": "HD security camera with motion detection, night vision, two-way audio, and cloud storage. Easy to set up and control with smartphone app.",
+    "image": "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    "category": "Smart Home",
+    "rating": 4.5,
+    "stock": 7
+  }
+]

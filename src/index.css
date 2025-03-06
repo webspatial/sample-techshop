@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -64,5 +68,35 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@layer components {
+  .product-card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-105;
+  }
+
+  .product-image {
+    @apply w-full h-48 object-cover object-center;
+  }
+
+  .product-info {
+    @apply p-4;
+  }
+
+  .product-title {
+    @apply text-lg font-semibold text-gray-800 mb-2 line-clamp-2;
+  }
+
+  .product-price {
+    @apply text-xl font-bold text-indigo-600;
+  }
+
+  .product-description {
+    @apply text-gray-600 mt-2 line-clamp-3;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors;
   }
 }
