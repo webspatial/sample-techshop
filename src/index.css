@@ -122,11 +122,13 @@ html.is-spatial {
   }
 
   .navbar {
+    @apply mx-auto;
     --xr-background-material: translucent;
+    width: 1000px;
     position: absolute;
     top: 10px;
-    left: 200px;
-    right: 200px;
+    left: 0;
+    right: 0;
     --xr-back: 50;
     border-radius: 50px;
   }
