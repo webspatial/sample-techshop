@@ -10,15 +10,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen w-full">
       <Navbar />
-
-
-      
-      <main
-        className="flex-grow   w-full webmaterial"
-        enable-xr
-         
-      >
-      
+      <main enable-xr className="flex-grow w-full main-window">
         <div className="container mx-auto px-4 max-w-7xl">{children}</div>
       </main>
       <Footer />
@@ -27,3 +19,5 @@ const Layout: FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
+
+console.log(1);

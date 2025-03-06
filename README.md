@@ -9,7 +9,7 @@ pnpm install
 Open two terminals and run these two commands in each one:
 
 ```bash
-pnpm dev
+XR_ENV=avp pnpm dev
 ```
 
 ```bash
