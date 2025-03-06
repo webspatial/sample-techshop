@@ -102,7 +102,12 @@ button:focus-visible {
   }
 }
 
+
 main {
   background: none !important;
+  
+}
+
+.webmaterial {
   --xr-background-material: translucent;
 }
