@@ -2,6 +2,7 @@ import { FC, useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Product } from "../types";
 import productsData from "../data/products.json";
+import ImageViewer from "../components/ImageViewer";
 
 const ProductDetail: FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -9,6 +10,9 @@ const ProductDetail: FC = () => {
   const [quantity, setQuantity] = useState<number>(1);
   const [loading, setLoading] = useState<boolean>(true);
   const [relatedProducts, setRelatedProducts] = useState<Product[]>([]);
+  const [isImageViewerOpen, setIsImageViewerOpen] = useState<boolean>(false);
+  const [currentImage, setCurrentImage] = useState<string>("");
+  const [currentImageAlt, setCurrentImageAlt] = useState<string>("");
 
   useEffect(() => {
     // 在实际应用中，这里可能会从 API 获取数据
@@ -47,6 +51,18 @@ const ProductDetail: FC = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
+  };
+
+  // 打开图片查看器
+  const openImageViewer = (imageSrc: string, imageAlt: string) => {
+    setCurrentImage(imageSrc);
+    setCurrentImageAlt(imageAlt);
+    setIsImageViewerOpen(true);
+  };
+
+  // 关闭图片查看器
+  const closeImageViewer = () => {
+    setIsImageViewerOpen(false);
   };
 
   if (loading) {
@@ -98,7 +114,8 @@ const ProductDetail: FC = () => {
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-auto object-contain sm:object-cover max-h-[300px] sm:max-h-[400px] md:max-h-[500px]"
+            className="w-full h-auto object-contain sm:object-cover max-h-[300px] sm:max-h-[400px] md:max-h-[500px] cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => openImageViewer(product.image, product.name)}
           />
         </div>
 
@@ -217,11 +234,16 @@ const ProductDetail: FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
             {relatedProducts.map(relatedProduct => (
               <div key={relatedProduct.id} className="product-card">
-                <img
-                  src={relatedProduct.image}
-                  alt={relatedProduct.name}
-                  className="product-image"
-                />
+                <div className="relative overflow-hidden">
+                  <img
+                    src={relatedProduct.image}
+                    alt={relatedProduct.name}
+                    className="product-image cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={() =>
+                      openImageViewer(relatedProduct.image, relatedProduct.name)
+                    }
+                  />
+                </div>
                 <div className="product-info">
                   <h3 className="product-title">{relatedProduct.name}</h3>
                   <p className="product-price">
@@ -238,6 +260,14 @@ const ProductDetail: FC = () => {
           </div>
         </div>
       )}
+
+      {/* 图片查看器 */}
+      <ImageViewer
+        src={currentImage}
+        alt={currentImageAlt}
+        isOpen={isImageViewerOpen}
+        onClose={closeImageViewer}
+      />
     </div>
   );
 };
