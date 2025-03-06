@@ -8,9 +8,9 @@ interface LayoutProps {
 
 const Layout: FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-full">
       <Navbar />
-      <main className="flex-grow bg-gray-50">{children}</main>
+      <main className="flex-grow bg-gray-50 w-full">{children}</main>
       <Footer />
     </div>
   );

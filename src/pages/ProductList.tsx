@@ -32,12 +32,14 @@ const ProductList: FC = () => {
   });
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold text-gray-800 mb-8">Our Products</h1>
+    <div className="container mx-auto px-4 py-8 max-w-full">
+      <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">
+        Our Products
+      </h1>
 
-      <div className="flex flex-col md:flex-row justify-between mb-8">
+      <div className="flex flex-col sm:flex-row justify-between mb-6 sm:mb-8 gap-4">
         {/* 搜索框 */}
-        <div className="mb-4 md:mb-0 w-full md:w-1/3">
+        <div className="w-full sm:w-1/2 lg:w-1/3">
           <div className="relative">
             <input
               type="text"
@@ -62,9 +64,9 @@ const ProductList: FC = () => {
         </div>
 
         {/* 分类过滤器 */}
-        <div className="w-full md:w-auto">
+        <div className="w-full sm:w-auto">
           <select
-            className="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             value={selectedCategory}
             onChange={e => setSelectedCategory(e.target.value)}>
             <option value="">All Categories</option>
@@ -81,14 +83,14 @@ const ProductList: FC = () => {
       </div>
 
       {/* 商品网格 */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
         {filteredProducts.length > 0 ? (
           filteredProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))
         ) : (
-          <div className="col-span-full text-center py-12">
-            <p className="text-xl text-gray-600">
+          <div className="col-span-full text-center py-8 sm:py-12">
+            <p className="text-lg sm:text-xl text-gray-600">
               No products found matching your criteria.
             </p>
             <button
