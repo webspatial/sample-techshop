@@ -4,6 +4,12 @@
 pnpm install
 ```
 
+Install the following tools globally:
+
+1. `pnpm add -g @webspatial/builder`
+2. Xcode
+3. visionOS simulator
+
 ## Development
 
 ### For desktop/mobile platforms
@@ -35,9 +41,12 @@ pnpm build
 ### For Vision Pro
 
 ```bash
-pnpm build
 cp .env.example .env
 # Fill in the Team ID, Username and Password for Apple Developer Program in the .env file.
+```
+
+```bash
+ pnpm build
 ```
 
 Then
