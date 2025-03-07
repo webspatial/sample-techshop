@@ -29,6 +29,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
         <div className="mt-auto pt-4 flex justify-between items-center">
           <Link
             to={`/product/${product.id}`}
+            target="_blank"
             className="btn-primary text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2">
             View Details
           </Link>
