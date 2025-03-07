@@ -14,8 +14,8 @@
   },
   "dependencies": {
     "@google/model-viewer": "4.0.0",
-    "@webspatial/core-sdk": "0.0.1-alpha",
-    "@webspatial/react-sdk": "0.0.3",
+    "@webspatial/core-sdk": "^0.0.1-alpha",
+    "@webspatial/react-sdk": "^0.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
