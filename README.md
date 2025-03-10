@@ -20,14 +20,10 @@ pnpm dev
 
 ### For Vision Pro
 
-Open two terminals and run these two commands in each one:
+Open the terminal and run these command:
 
 ```bash
-XR_ENV=avp pnpm dev
-```
-
-```bash
-pnpm dev:avp
+npm run devavp
 ```
 
 ## Distribution

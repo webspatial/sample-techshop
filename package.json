@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "devavp": "concurrently \"XR_ENV=avp vite \"  \"pnpm dev:avp \" ",
     "dev": "vite",
     "build": "vite build && XR_ENV=avp vite build",
     "lint": "eslint .",
@@ -14,14 +15,16 @@
   },
   "dependencies": {
     "@google/model-viewer": "4.0.0",
-    "@webspatial/core-sdk": "0.0.1-alpha",
-    "@webspatial/react-sdk": "0.0.3",
+    "@webspatial/core-sdk": "^0.0.1-alpha",
+    "@webspatial/react-sdk": "^0.0.6",
+    "@webspatial/react-plugin-vite": "^0.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
     "three": "^0.169.0"
   },
   "devDependencies": {
+    "concurrently": "^8.2.2",
     "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
