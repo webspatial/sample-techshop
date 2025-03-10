@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { VitePWA } from "vite-plugin-pwa";
 import { createHtmlPlugin } from "vite-plugin-html";
 import react from "@vitejs/plugin-react";
-import xrsdkPlugin from "@webspatial/react-sdk/plugin-vite.js";
+import xrsdkPlugin from "@webspatial/react-plugin-vite";
 
 dotenv.config();
 
@@ -36,5 +36,8 @@ export default defineConfig({
   // 可以在这里使用环境变量
   define: {
     "process.env": process.env,
+  },
+  server: {
+    port: process.env.XR_ENV ? 5201 : 5200,
   },
 });

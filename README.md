@@ -23,11 +23,7 @@ pnpm dev
 Open two terminals and run these two commands in each one:
 
 ```bash
-XR_ENV=avp pnpm dev
-```
-
-```bash
-pnpm dev:avp
+npm run devavp
 ```
 
 ## Distribution

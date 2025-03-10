@@ -2,7 +2,7 @@
   "name": "TechShop - Premium Tech Products",
   "short_name": "TechShop",
   "description": "Shop for premium tech products online",
-  "start_url": "http://localhost:5173/",
+  "start_url": "http://localhost:5201/",
   "scope": "/",
   "display": "minimal-ui",
   "background_color": "#ffffff",
