@@ -127,13 +127,14 @@ html.is-spatial {
   footer {
     background: none;
     --xr-background-material: translucent;
+    width: 600px;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     border-radius: 50px;
-    transform-origin: top left;
-    transform: translateZ(300px) rotateY(-90deg);
+    transform-origin: bottom left;
+    transform: translateZ(600px) rotateY(90deg);
   }
 
   .product-card {
