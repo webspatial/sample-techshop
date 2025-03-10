@@ -20,7 +20,7 @@ pnpm dev
 
 ### For Vision Pro
 
-Open two terminals and run these two commands in each one:
+Open the terminal and run these command:
 
 ```bash
 npm run devavp
