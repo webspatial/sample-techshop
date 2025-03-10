@@ -104,16 +104,7 @@ button:focus-visible {
 
 html.is-spatial {
   background-color: transparent;
-
-  body {
-    /* overflow: hidden; */
-    /* min-height: auto; */
-  }
-
-  .scrollable-content {
-    /* height: 100%; */
-    /* overflow-y: auto; */
-  }
+  /* --xr-background-material: transparent; */
 
   .main-window {
     --xr-background-material: transparent;
@@ -125,19 +116,41 @@ html.is-spatial {
     @apply mx-auto;
     --xr-background-material: translucent;
     width: 1000px;
-    position: absolute;
-    top: 10px;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     --xr-back: 50;
     border-radius: 50px;
   }
 
-  @layer components {
-    .product-card {
-      /* background: none;
-      box-shadow: none;
-      --xr-background-material: translucent; */
-    }
+  footer {
+    background: none;
+    --xr-background-material: translucent;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50px;
+    transform-origin: top left;
+    transform: translateZ(300px) rotateY(-90deg);
   }
+
+  .product-card {
+    background: none;
+    box-shadow: none;
+    --xr-background-material: translucent;
+  }
+
+  .product-detail {
+    --xr-background-material: translucent;
+    background: #fff;
+    padding: 100px;
+  }
+}
+
+/* 添加自定义网格布局样式 */
+.auto-fill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }

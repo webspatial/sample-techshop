@@ -90,7 +90,7 @@ const ProductDetail: FC = () => {
   }
 
   return (
-    <div className="py-6 sm:py-8">
+    <div className="product-detail py-6 sm:py-8" enable-xr>
       {/* 面包屑导航 */}
       <div className="text-sm text-gray-500 mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap pb-2">
         <Link to="/" className="hover:text-indigo-600">

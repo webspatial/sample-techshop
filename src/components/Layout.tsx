@@ -16,7 +16,7 @@ const Layout: FC<LayoutProps> = ({ children }) => {
           "flex-grow w-full " +
           (process.env.XR_ENV !== "avp" ? "bg-gray-50" : "main-window")
         }>
-        <div className="container mx-auto px-4 max-w-7xl">{children}</div>
+        <div className="w-full px-4">{children}</div>
       </main>
       <Footer />
     </div>
