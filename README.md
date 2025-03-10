@@ -6,9 +6,9 @@ pnpm install
 
 Install the following tools globally:
 
-1. `pnpm add -g @webspatial/builder`
-2. Xcode
-3. visionOS simulator
+1. Xcode
+2. visionOS simulator
+<!-- 3. `pnpm add -g @webspatial/builder` -->
 
 ## Development
 
@@ -18,12 +18,26 @@ Install the following tools globally:
 pnpm dev
 ```
 
+> Ensure the environment variable `XR_ENV` is empty when running this devserver
+
 ### For Vision Pro
 
-Open the terminal and run these command:
+Option A: open two terminals and run these two commands in each one:
 
 ```bash
-npm run devavp
+XR_ENV=avp pnpm dev
+```
+
+> This environment-variable-enabled devserver can coexist with the devserver for desktop/mobile, using different ports automatically.
+
+```bash
+npm run dev:avp
+```
+
+Option B: open one terminal and run this all-in-one command:
+
+```bash
+npm run dev:all
 ```
 
 ## Distribution
@@ -36,16 +50,21 @@ pnpm build
 
 ### For Vision Pro
 
+Step 1:
+
 ```bash
 cp .env.example .env
-# Fill in the Team ID, Username and Password for Apple Developer Program in the .env file.
 ```
+
+Fill in the Team ID, Username and Password for Apple Developer Program in the .env file.
+
+Step 2:
 
 ```bash
- pnpm build
+pnpm build
 ```
 
-Then
+Step 3:
 
 ```bash
 pnpm build:avp

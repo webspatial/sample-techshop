@@ -4,12 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "devavp": "concurrently \"XR_ENV=avp vite \"  \"pnpm dev:avp \" ",
     "dev": "vite",
     "build": "vite build && XR_ENV=avp vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "dev:avp": "dotenv -- webspatial-builder dev --manifest=public/manifest.webspatial.dev.json",
+    "dev:all": "concurrently \"XR_ENV=avp pnpm dev\"  \"pnpm dev:avp \" ",
     "build:avp": "dotenv -- sh -c 'webspatial-builder build --manifest=public/manifest.webspatial.prod.json --project=dist --export=build/ --teamId=$XR_TEAM_ID'",
     "publish:avp": "dotenv -- sh -c 'webspatial-builder publish --manifest=public/manifest.webspatial.prod.json --project=dist --teamId=$XR_TEAM_ID --version=$XR_VERSION --u=$XR_DEV_NAME --p=$XR_DEV_PASSWORD'"
   },
@@ -24,12 +24,13 @@
     "three": "^0.169.0"
   },
   "devDependencies": {
-    "concurrently": "^8.2.2",
     "@eslint/js": "^9.21.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "@webspatial/builder": "^0.0.6",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^8.2.2",
     "dotenv": "^16.4.7",
     "dotenv-cli": "^8.0.0",
     "eslint": "^9.21.0",
