@@ -17,7 +17,7 @@
   "dependencies": {
     "@google/model-viewer": "4.0.0",
     "@webspatial/core-sdk": "^0.0.1-alpha",
-    "@webspatial/react-sdk": "^0.0.6",
+    "@webspatial/react-sdk": "^0.0.8",
     "@webspatial/react-plugin-vite": "^0.0.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
