@@ -11,11 +11,13 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <div className="flex flex-col min-h-screen w-full">
       <Navbar />
       <main
+        debugName="main"
         enable-xr
         className={
           "flex-grow w-full " +
           (process.env.XR_ENV !== "avp" ? "bg-gray-50" : "main-window")
-        }>
+        }
+      >
         <div className="w-full px-4">{children}</div>
       </main>
       <Footer />
