@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev:internal": "XR_ENV=avp vite --config internal.vite.config.ts ",
     "dev": "vite",
     "build": "vite build && XR_ENV=avp vite build",
     "lint": "eslint .",
