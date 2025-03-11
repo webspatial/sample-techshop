@@ -11,9 +11,11 @@ const Navbar: FC = () => {
   return (
     <nav
       enable-xr
+      debugName="navbar"
       className={
         "" + (process.env.XR_ENV !== "avp" ? "bg-indigo-600 w-full" : "navbar")
-      }>
+      }
+    >
       <div className="w-full px-6 sm:px-8 md:px-12 py-3">
         <div className="flex justify-between items-center">
           <Link to="/" className="text-xl sm:text-2xl font-bold text-white">
@@ -23,27 +25,32 @@ const Navbar: FC = () => {
           <div className="hidden md:flex space-x-8 lg:space-x-12">
             <Link
               to="/"
-              className="text-white hover:text-indigo-200 transition-colors font-medium">
+              className="text-white hover:text-indigo-200 transition-colors font-medium"
+            >
               Home
             </Link>
             <Link
               to="/"
-              className="text-white hover:text-indigo-200 transition-colors font-medium">
+              className="text-white hover:text-indigo-200 transition-colors font-medium"
+            >
               Products
             </Link>
             <Link
               to="/"
-              className="text-white hover:text-indigo-200 transition-colors font-medium">
+              className="text-white hover:text-indigo-200 transition-colors font-medium"
+            >
               Categories
             </Link>
             <Link
               to="/"
-              className="text-white hover:text-indigo-200 transition-colors font-medium">
+              className="text-white hover:text-indigo-200 transition-colors font-medium"
+            >
               About
             </Link>
             <Link
               to="/"
-              className="text-white hover:text-indigo-200 transition-colors font-medium">
+              className="text-white hover:text-indigo-200 transition-colors font-medium"
+            >
               Contact
             </Link>
           </div>
@@ -55,7 +62,8 @@ const Navbar: FC = () => {
                 className="h-5 w-5 sm:h-6 sm:w-6"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor">
+                stroke="currentColor"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -70,7 +78,8 @@ const Navbar: FC = () => {
                 className="h-5 w-5 sm:h-6 sm:w-6"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor">
+                stroke="currentColor"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -84,13 +93,15 @@ const Navbar: FC = () => {
             </button>
             <button
               className="md:hidden hover:text-indigo-200 transition-colors bg-transparent p-0"
-              onClick={toggleMobileMenu}>
+              onClick={toggleMobileMenu}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor">
+                stroke="currentColor"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -113,31 +124,36 @@ const Navbar: FC = () => {
               <Link
                 to="/"
                 className="text-white hover:text-indigo-200 transition-colors font-medium"
-                onClick={() => setMobileMenuOpen(false)}>
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Home
               </Link>
               <Link
                 to="/"
                 className="text-white hover:text-indigo-200 transition-colors font-medium"
-                onClick={() => setMobileMenuOpen(false)}>
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Products
               </Link>
               <Link
                 to="/"
                 className="text-white hover:text-indigo-200 transition-colors font-medium"
-                onClick={() => setMobileMenuOpen(false)}>
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Categories
               </Link>
               <Link
                 to="/"
                 className="text-white hover:text-indigo-200 transition-colors font-medium"
-                onClick={() => setMobileMenuOpen(false)}>
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 About
               </Link>
               <Link
                 to="/"
                 className="text-white hover:text-indigo-200 transition-colors font-medium"
-                onClick={() => setMobileMenuOpen(false)}>
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 Contact
               </Link>
             </div>

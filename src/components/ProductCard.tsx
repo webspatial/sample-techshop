@@ -9,15 +9,19 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({ product }) => {
   return (
-    <div enable-xr className="product-card h-full flex flex-col w-full">
+    <div
+      enable-xr
+      debugName={"card" + product.id}
+      className="product-card h-full flex flex-col w-full"
+    >
       <div className="relative overflow-hidden h-40 sm:h-48">
         <img
           src={product.image}
           alt={product.name}
           className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-110"
-          onClick={e => {
+          onClick={(e) => {
             e.preventDefault();
-            initScene("detailScene", prevConfig => {
+            initScene("detailScene", (prevConfig) => {
               return {
                 ...prevConfig,
                 defaultSize: {
@@ -43,13 +47,15 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
         <div className="mt-auto pt-4 flex justify-between items-center">
           <Link
             enable-xr
+            debugName={"link-view-details" + product.id}
             style={{
               "--xr-back": 20,
               position: "relative",
             }}
             to={`/product/${product.id}`}
             target="_blank"
-            className="btn-primary text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2">
+            className="btn-primary text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2"
+          >
             View Details
           </Link>
           <span className="text-xs sm:text-sm text-gray-600">
