@@ -1,7 +1,13 @@
+# TechShop Demo
+
+Demo for the full process and final use of WebSpatial
+
 ## Setup
 
+Run this command to reinstall dependencies after cloning or updating the repository:
+
 ```bash
-pnpm install
+pnpm install:clean
 ```
 
 Install the following tools globally:
@@ -76,7 +82,7 @@ Or
 pnpm publish:avp
 ```
 
-### How to debug using WebSpatial SDK source code
+## How to debug using WebSpatial SDK source code
 
 Step 1: clone the WebSpatial SDK source code
 
@@ -97,9 +103,7 @@ Step 3: run the following command to start web project
 npm run dev:internal
 ```
 
-
 now you visit http://localhost:5201/ in you browser
-
 
 Step 4: open XCode project in WebSpatial SDK source code, which is located in
 
@@ -123,8 +127,6 @@ var start_url: String = "http://localhost:5201/"
 Step 6
 run you XCode project, it will open your web project in XCode simulator
 
-
 Step 7: you can change your webspatial SDK source to see the effect immediately
 
 Note: don't run npm run dev:avp, use npm run dev:internal instead
-
