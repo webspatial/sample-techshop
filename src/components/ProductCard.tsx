@@ -19,9 +19,9 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
           src={product.image}
           alt={product.name}
           className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-110"
-          onClick={(e) => {
+          onClick={e => {
             e.preventDefault();
-            initScene("detailScene", (prevConfig) => {
+            initScene("detailScene", prevConfig => {
               return {
                 ...prevConfig,
                 defaultSize: {
@@ -49,7 +49,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
             enable-xr
             debugName={"link-view-details" + product.id}
             style={{
-              "--xr-back": 20,
+              "--xr-back": 50,
               position: "relative",
             }}
             to={`/product/${product.id}`}

@@ -25,7 +25,7 @@ const ProductDetail: FC = () => {
       // 获取相关商品（同类别的其他商品）
       const related = (productsData as Product[])
         .filter(
-          p => p.category === foundProduct.category && p.id !== foundProduct.id,
+          p => p.category === foundProduct.category && p.id !== foundProduct.id
         )
         .slice(0, 4);
       setRelatedProducts(related);
@@ -167,7 +167,8 @@ const ProductDetail: FC = () => {
                   product.stock > 0
                     ? "text-green-600 ml-2"
                     : "text-red-600 ml-2"
-                }>
+                }
+              >
                 {product.stock > 0
                   ? `${product.stock} in stock`
                   : "Out of stock"}
@@ -180,7 +181,8 @@ const ProductDetail: FC = () => {
                 <div className="flex items-center border border-gray-300 rounded-md">
                   <button
                     onClick={decrementQuantity}
-                    className="px-3 py-1 border-r border-gray-300 hover:bg-gray-100">
+                    className="px-3 py-1 border-r border-gray-300 hover:bg-gray-100"
+                  >
                     -
                   </button>
                   <input
@@ -193,7 +195,8 @@ const ProductDetail: FC = () => {
                   />
                   <button
                     onClick={incrementQuantity}
-                    className="px-3 py-1 border-l border-gray-300 hover:bg-gray-100">
+                    className="px-3 py-1 border-l border-gray-300 hover:bg-gray-100"
+                  >
                     +
                   </button>
                 </div>
@@ -204,7 +207,8 @@ const ProductDetail: FC = () => {
           <div className="flex flex-wrap gap-3 sm:gap-4">
             <button
               className="btn-primary flex-1"
-              disabled={product.stock === 0}>
+              disabled={product.stock === 0}
+            >
               Add to Cart
             </button>
             <button className="px-3 sm:px-4 py-2 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">
@@ -212,7 +216,8 @@ const ProductDetail: FC = () => {
                 className="h-5 w-5 sm:h-6 sm:w-6 text-gray-600"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke="currentColor">
+                stroke="currentColor"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -251,7 +256,8 @@ const ProductDetail: FC = () => {
                   </p>
                   <Link
                     to={`/product/${relatedProduct.id}`}
-                    className="btn-primary block text-center mt-4">
+                    className="btn-primary block text-center mt-4"
+                  >
                     View Details
                   </Link>
                 </div>

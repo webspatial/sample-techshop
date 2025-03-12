@@ -4,9 +4,9 @@ import ProductList from "./pages/ProductList";
 import ProductDetail from "./pages/ProductDetail";
 import "./index.css";
 
-import { enableDebugTool } from "@webspatial/react-sdk";
+// import { enableDebugTool } from "@webspatial/react-sdk";
 
-enableDebugTool();
+// enableDebugTool();
 
 function App() {
   return (

@@ -51,7 +51,8 @@ const ProductList: FC = () => {
             className="absolute right-3 top-2.5 h-5 w-5 text-gray-400"
             fill="none"
             viewBox="0 0 24 24"
-            stroke="currentColor">
+            stroke="currentColor"
+          >
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -77,7 +78,8 @@ const ProductList: FC = () => {
                       ? "bg-indigo-100 text-indigo-700 font-medium"
                       : "text-gray-700 hover:bg-gray-100"
                   }`}
-                  onClick={() => setSelectedCategory("")}>
+                  onClick={() => setSelectedCategory("")}
+                >
                   All Categories
                 </button>
               </li>
@@ -91,11 +93,12 @@ const ProductList: FC = () => {
                             ? "bg-indigo-100 text-indigo-700 font-medium"
                             : "text-gray-700 hover:bg-gray-100"
                         }`}
-                        onClick={() => setSelectedCategory(category)}>
+                        onClick={() => setSelectedCategory(category)}
+                      >
                         {category}
                       </button>
                     </li>
-                  ),
+                  )
               )}
             </ul>
           </div>
@@ -118,7 +121,8 @@ const ProductList: FC = () => {
                   onClick={() => {
                     setSelectedCategory("");
                     setSearchTerm("");
-                  }}>
+                  }}
+                >
                   Clear Filters
                 </button>
               </div>
