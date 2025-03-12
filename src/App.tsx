@@ -1,18 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import ProductList from "./pages/ProductList";
-import ProductDetail from "./pages/ProductDetail";
 import "./index.css";
+import Main from "./pages/Main";
+import Game from "./pages/Game";
 
 function App() {
   return (
     <Router>
-      <Layout>
         <Routes>
-          <Route path="/" element={<ProductList />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/game" element={<Game />} />
         </Routes>
-      </Layout>
     </Router>
   );
 }

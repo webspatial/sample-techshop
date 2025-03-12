@@ -1,108 +1,103 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+html {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
+  --xr-background-material: transparent;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+.main-page, .game-page{
+  width:100vw;
+  height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #f0f0f0;
-  color: #333;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.main-title{
+  font-size: 100px;
+  font-weight: bold;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.start-btn, .back-btn{
+  width:200px;
+  height:50px;
+  font-size: 30px;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
 }
 
-@layer components {
-  .product-card {
-    @apply bg-white rounded-lg shadow-md overflow-hidden transition-transform duration-300 hover:shadow-xl hover:scale-105;
-  }
-
-  .product-image {
-    @apply w-full h-48 object-cover object-center;
-  }
-
-  .product-info {
-    @apply p-4;
-  }
-
-  .product-title {
-    @apply text-lg font-semibold text-gray-800 mb-2 line-clamp-2;
-  }
-
-  .product-price {
-    @apply text-xl font-bold text-indigo-600;
-  }
-
-  .product-description {
-    @apply text-gray-600 mt-2 line-clamp-3;
-  }
-
-  .btn-primary {
-    @apply bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors;
-  }
+.spatial-btn{
+  position: absolute;
+  --xr-back:200;
+  --xr-background-material: transparent;
 }
 
-main {
-  background: none !important;
-  --xr-background-material: translucent;
+.hitBtn{
+  position: absolute;
+  width:100px;
+  height:100px;
+  --xr-back:500;
+}
+
+.leftBtn{
+  background-color: rgba(255,0,0,0.8);
+}
+
+.rightBtn{
+  background-color: rgba(0,0,255,0.8);
+}
+
+.box-container{
+  position: absolute;
+  width:100px;
+  height:100px;
+}
+
+.box-plane{
+  position: absolute;
+  width:100px;
+  height:100px;
+  background-color: red;
+}
+
+.plane-left{
+  left:-50px;
+  transform: rotateY(90deg);
+  --xr-back:50;
+}
+
+.plane-right{
+  left:50px;
+  transform: rotateY(90deg);
+  --xr-back:50;
+}
+
+.plane-top{
+  top:-50px;
+  transform: rotateX(90deg);
+  --xr-back:50;
+}  
+.plane-bottom{
+  top:50px;
+  transform: rotateX(90deg);
+  --xr-back:50;
+}
+
+.plane-front{
+  left:0;
+  --xr-back:100;
+}
+
+.plane-back{
+  left:0;
+  --xr-back:0;
 }

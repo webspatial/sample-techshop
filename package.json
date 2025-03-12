@@ -10,12 +10,14 @@
     "preview": "vite preview",
     "dev:avp": "dotenv -- webspatial-builder dev --manifest=public/manifest.webspatial.dev.json",
     "build:avp": "dotenv -- sh -c 'webspatial-builder build --manifest=public/manifest.webspatial.prod.json --project=dist --export=build/ --teamId=$XR_TEAM_ID'",
-    "publish:avp": "dotenv -- sh -c 'webspatial-builder publish --manifest=public/manifest.webspatial.prod.json --project=dist --teamId=$XR_TEAM_ID --version=$XR_VERSION --u=$XR_DEV_NAME --p=$XR_DEV_PASSWORD'"
+    "publish:avp": "dotenv -- sh -c 'webspatial-builder publish --manifest=public/manifest.webspatial.prod.json --project=dist --teamId=$XR_TEAM_ID --version=$XR_VERSION --u=$XR_DEV_NAME --p=$XR_DEV_PASSWORD'",
+    "checkBuilderVersion": "webspatial-builder version"
   },
   "dependencies": {
     "@google/model-viewer": "4.0.0",
     "@webspatial/core-sdk": "0.0.1-alpha",
-    "@webspatial/react-sdk": "0.0.3",
+    "@webspatial/react-sdk": "0.0.6",
+    "@webspatial/builder": "0.0.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
