@@ -1,10 +1,16 @@
-import { defineConfig } from "vite";
+import { defineConfig, Plugin } from "vite";
+import dotenv from "dotenv";
 import baseConfig from "./vite.config";
 import merge from "lodash/merge";
 import path from "path";
 import tsconfig from "./tsconfig.app.json";
 
-const XRSDKBaseDir = "/Users/bytedance/github/XRSDK/";
+dotenv.config();
+
+const XRSDKBaseDir = process.env.XRSDK_BASE_DIR;
+if (!XRSDKBaseDir) {
+  throw new Error("XRSDK_BASE_DIR is not set in `.env` file");
+}
 
 // update tsconfig jsxImportSource
 tsconfig.compilerOptions.jsxImportSource = "@webspatial/react-sdk/jsx";
@@ -27,7 +33,7 @@ const configForDevSourceCode = {
 // remove 'react-vite-plugin-for-webspatial' plugin
 function removeReactVitePluginForWebspatialPlugin() {
   const index = baseConfig.plugins?.findIndex(
-    (plugin) => (plugin as any).name === "react-vite-plugin-for-webspatial"
+    plugin => (plugin as Plugin).name === "react-vite-plugin-for-webspatial"
   );
   if (index !== undefined && index !== -1) {
     baseConfig.plugins?.splice(index, 1);
