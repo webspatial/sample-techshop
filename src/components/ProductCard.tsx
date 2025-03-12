@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Product } from "../types";
 import { Link } from "react-router-dom";
+import { initScene } from "@webspatial/react-sdk";
 
 interface ProductCardProps {
   product: Product;
@@ -8,12 +9,29 @@ interface ProductCardProps {
 
 const ProductCard: FC<ProductCardProps> = ({ product }) => {
   return (
-    <div className="product-card h-full flex flex-col">
+    <div
+      enable-xr
+      debugName={"card" + product.id}
+      className="product-card h-full flex flex-col w-full"
+    >
       <div className="relative overflow-hidden h-40 sm:h-48">
         <img
           src={product.image}
           alt={product.name}
           className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-110"
+          onClick={(e) => {
+            e.preventDefault();
+            initScene("detailScene", (prevConfig) => {
+              return {
+                ...prevConfig,
+                defaultSize: {
+                  width: 1000,
+                  height: 1000,
+                },
+              };
+            });
+            window.open(`/product/${product.id}`, "detailScene");
+          }}
         />
       </div>
       <div className="product-info flex-grow flex flex-col">
@@ -28,8 +46,16 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
         <p className="product-description mt-2">{product.description}</p>
         <div className="mt-auto pt-4 flex justify-between items-center">
           <Link
+            enable-xr
+            debugName={"link-view-details" + product.id}
+            style={{
+              "--xr-back": 20,
+              position: "relative",
+            }}
             to={`/product/${product.id}`}
-            className="btn-primary text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2">
+            target="_blank"
+            className="btn-primary text-sm sm:text-base px-3 py-1.5 sm:px-4 sm:py-2"
+          >
             View Details
           </Link>
           <span className="text-xs sm:text-sm text-gray-600">

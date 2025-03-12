@@ -3,6 +3,10 @@ import "./index.css";
 import Main from "./pages/Main";
 import Game from "./pages/Game";
 
+import { enableDebugTool } from "@webspatial/react-sdk";
+
+enableDebugTool();
+
 function App() {
   return (
     <Router>

@@ -1,28 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/icons/shop-icon.svg" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>TechShop - Premium Tech Products</title>
+<%- XR_ENV === 'avp' ? `
+<html
+  lang="en"
+  class="is-spatial" >
+  ` : `
+  <html lang="en">
+    ` %>
+    <head>
+      <meta charset="UTF-8" />
+      <link rel="icon" type="image/svg+xml" href="/icons/shop-icon.svg" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      <title>TechShop - Premium Tech Products</title>
 
-    <!-- PWA 相关标签 -->
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#4f46e5" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta
-      name="apple-mobile-web-app-status-bar-style"
-      content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="TechShop" />
-    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
-    <meta
-      name="description"
-      content="TechShop - Shop for premium tech products online" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+      <!-- PWA -->
+      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content="#4f46e5" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="TechShop" />
+      <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+      <meta
+        name="description"
+        content="TechShop - Shop for premium tech products online" />
+    </head>
+    <body>
+      <div id="root"></div>
+      <script type="module" src="/src/main.tsx"></script>
+    </body>
+  </html>
 </html>

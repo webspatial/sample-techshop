@@ -103,7 +103,7 @@ const ProductList: FC = () => {
 
         {/* 商品网格 */}
         <div className="flex-1">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className={"auto-fill-grid" + " gap-4 sm:gap-6"}>
             {filteredProducts.length > 0 ? (
               filteredProducts.map(product => (
                 <ProductCard key={product.id} product={product} />
