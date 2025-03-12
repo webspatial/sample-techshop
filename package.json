@@ -16,7 +16,17 @@
     "dev:all": "concurrently \"XR_ENV=avp pnpm dev\"  \"pnpm dev:avp \" ",
     "build:avp": "dotenv -- sh -c 'webspatial-builder build --manifest=public/manifest.webspatial.prod.json --project=dist --export=build/ --teamId=$XR_TEAM_ID'",
     "publish:avp": "dotenv -- sh -c 'webspatial-builder publish --manifest=public/manifest.webspatial.prod.json --project=dist --teamId=$XR_TEAM_ID --version=$XR_VERSION --u=$XR_DEV_NAME --p=$XR_DEV_PASSWORD'",
-    "dev:internal": "XR_ENV=avp vite --config internal.vite.config.ts "
+    "dev:internal": "XR_ENV=avp vite --config internal.vite.config.ts ",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,scss,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@google/model-viewer": "4.0.0",
