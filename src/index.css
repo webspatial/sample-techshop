@@ -127,17 +127,25 @@ html.is-spatial {
     border-radius: 50px;
   }
 
-  footer {
+  .folded-footer {
     background: none;
     --xr-background-material: translucent;
-    width: 600px;
+    border-radius: 50px;
+    --xr-back: 100;
+  }
+  .unfolded-footer {
+    background: none;
+    --xr-background-material: translucent;
+    border-radius: 50px;
     position: fixed;
     bottom: 0;
     left: 0;
-    border-radius: 50px;
-    width: 1100px;
-    transform-origin: bottom left;
-    transform: translateZ(100px);
+    --xr-back: 100;
+    width: 1200px;
+
+    footer {
+      background: none;
+    }
   }
 
   .list-window {
