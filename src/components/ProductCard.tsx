@@ -37,7 +37,9 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
       <div className="product-info flex-grow flex flex-col">
         <h3 className="product-title">{product.name}</h3>
         <div className="flex justify-between items-center mt-2">
-          <p className="product-price">${product.price.toFixed(2)}</p>
+          <p enable-xr className="product-price">
+            ${product.price.toFixed(2)}
+          </p>
           <div className="flex items-center">
             <span className="text-yellow-500 mr-1">★</span>
             <span className="text-sm text-gray-600">{product.rating}</span>

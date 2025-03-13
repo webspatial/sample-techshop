@@ -104,7 +104,7 @@ button:focus-visible {
 
 html.is-spatial {
   background-color: transparent;
-  /* --xr-background-material: transparent; */
+  --xr-background-material: transparent;
 
   .main-window {
     --xr-background-material: transparent;
@@ -147,6 +147,19 @@ html.is-spatial {
     --xr-background-material: translucent;
     background: #fff;
     padding: 100px;
+  }
+
+  .product-title {
+    @apply text-gray-100;
+  }
+  .product-price {
+    @apply text-indigo-400;
+    position: relative;
+    --xr-back: 10;
+    /* top: 0; */
+  }
+  .product-description {
+    @apply text-gray-900;
   }
 }
 

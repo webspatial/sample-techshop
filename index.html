@@ -1,9 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 <%- XR_ENV === 'avp' ? `
-<html
-  lang="en"
-  class="is-spatial"
-  style="--xr-background-material: transparent">
+<html lang="en" class="is-spatial">
   ` : `
   <html lang="en">
     ` %>
@@ -12,7 +9,8 @@
       <link rel="icon" type="image/svg+xml" href="/icons/shop-icon.svg" />
       <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      />
       <title>TechShop - Premium Tech Products</title>
 
       <!-- PWA -->
@@ -21,12 +19,14 @@
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta
         name="apple-mobile-web-app-status-bar-style"
-        content="black-translucent" />
+        content="black-translucent"
+      />
       <meta name="apple-mobile-web-app-title" content="TechShop" />
       <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
       <meta
         name="description"
-        content="TechShop - Shop for premium tech products online" />
+        content="TechShop - Shop for premium tech products online"
+      />
     </head>
     <body>
       <div id="root"></div>
