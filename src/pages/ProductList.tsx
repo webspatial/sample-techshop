@@ -33,7 +33,7 @@ const ProductList: FC = () => {
 
   return (
     <div className="py-8">
-      <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">
+      <h1 className="list-title text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">
         Our Products
       </h1>
 
@@ -63,20 +63,39 @@ const ProductList: FC = () => {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6">
+      <div className="list-window flex flex-col md:flex-row gap-6">
         {/* 左侧分类菜单 */}
-        <div className="w-full md:w-64 shrink-0">
-          <div className="bg-white rounded-lg shadow-md p-4">
+        <div enable-xr className="list-meun w-full md:w-64 shrink-0">
+          <div
+            enable-xr
+            className="list-meun-bg bg-white rounded-lg shadow-md p-4"
+          >
             <h2 className="text-lg font-semibold text-gray-800 mb-4">
               Categories
             </h2>
             <ul className="space-y-2">
               <li>
                 <button
+                  enable-xr
+                  style={
+                    process.env.XR_ENV === "avp"
+                      ? selectedCategory === ""
+                        ? {
+                            "--xr-background-material": "thin",
+                          }
+                        : {
+                            "--xr-background-material": "thick",
+                          }
+                      : {}
+                  }
                   className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
-                    selectedCategory === ""
-                      ? "bg-indigo-100 text-indigo-700 font-medium"
-                      : "text-gray-700 hover:bg-gray-100"
+                    process.env.XR_ENV === "avp"
+                      ? selectedCategory === ""
+                        ? "text-gray-100"
+                        : "text-gray-900"
+                      : selectedCategory === ""
+                        ? "bg-indigo-100 text-indigo-700 font-medium"
+                        : "text-gray-700 hover:bg-gray-100"
                   }`}
                   onClick={() => setSelectedCategory("")}
                 >
@@ -88,10 +107,26 @@ const ProductList: FC = () => {
                   category !== "All" && (
                     <li key={index}>
                       <button
+                        enable-xr
+                        style={
+                          process.env.XR_ENV === "avp"
+                            ? selectedCategory === category
+                              ? {
+                                  "--xr-background-material": "thin",
+                                }
+                              : {
+                                  "--xr-background-material": "thick",
+                                }
+                            : {}
+                        }
                         className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
-                          selectedCategory === category
-                            ? "bg-indigo-100 text-indigo-700 font-medium"
-                            : "text-gray-700 hover:bg-gray-100"
+                          process.env.XR_ENV === "avp"
+                            ? selectedCategory === category
+                              ? "text-gray-100"
+                              : "text-gray-900"
+                            : selectedCategory === category
+                              ? "bg-indigo-100 text-indigo-700 font-medium"
+                              : "text-gray-700 hover:bg-gray-100"
                         }`}
                         onClick={() => setSelectedCategory(category)}
                       >

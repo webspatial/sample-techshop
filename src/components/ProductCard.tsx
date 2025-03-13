@@ -26,7 +26,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
                 ...prevConfig,
                 defaultSize: {
                   width: 1000,
-                  height: 1000,
+                  height: 800,
                 },
               };
             });
@@ -51,7 +51,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
             enable-xr
             debugName={"link-view-details" + product.id}
             style={{
-              "--xr-back": 50,
+              "--xr-back": 10,
               position: "relative",
             }}
             to={`/product/${product.id}`}

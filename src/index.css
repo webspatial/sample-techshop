@@ -107,9 +107,12 @@ html.is-spatial {
   --xr-background-material: transparent;
 
   .main-window {
+    /* @apply bg-none; */
+    background: none;
     --xr-background-material: transparent;
     position: relative;
     top: 70px;
+    margin-left: 40px;
   }
 
   .navbar {
@@ -131,10 +134,34 @@ html.is-spatial {
     position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
     border-radius: 50px;
+    width: 1100px;
     transform-origin: bottom left;
-    transform: translateZ(600px) rotateY(90deg);
+    transform: translateZ(100px);
+  }
+
+  .list-window {
+  }
+
+  .list-title {
+    @apply text-gray-100;
+  }
+
+  .list-meun {
+    position: fixed;
+    top: 200px;
+    left: 0;
+    transform-origin: top left;
+    transform: translateZ(320px) rotateY(80deg);
+  }
+
+  .list-meun-bg {
+    background: none;
+    --xr-background-material: translucent;
+
+    button {
+      background: none;
+    }
   }
 
   .product-card {

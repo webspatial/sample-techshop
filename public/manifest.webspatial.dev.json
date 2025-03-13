@@ -5,6 +5,12 @@
   "start_url": "http://localhost:5201/",
   "scope": "/",
   "display": "minimal-ui",
+  "xr_main_scene": {
+    "default_size": {
+      "width": 1700,
+      "height": 1200
+    }
+  },
   "background_color": "#ffffff",
   "theme_color": "#4f46e5",
   "icons": [

@@ -108,9 +108,9 @@ const ProductDetail: FC = () => {
         <span className="text-gray-800">{product.name}</span>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-16">
-        {/* 商品图片 */}
-        <div className="bg-white rounded-lg overflow-hidden shadow-md">
+      <div className="flex flex-col md:flex-row gap-6 sm:gap-8 mb-10 sm:mb-16">
+        {/* 商品图片 - 左侧跟随页面宽度变化 */}
+        <div className="bg-white rounded-lg overflow-hidden shadow-md md:flex-1">
           <img
             src={product.image}
             alt={product.name}
@@ -119,8 +119,8 @@ const ProductDetail: FC = () => {
           />
         </div>
 
-        {/* 商品信息 */}
-        <div className="flex flex-col">
+        {/* 商品信息 - 右侧固定宽度 */}
+        <div className="flex flex-col w-full md:w-auto md:max-w-md lg:max-w-lg">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">
             {product.name}
           </h1>
