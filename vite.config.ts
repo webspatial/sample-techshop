@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { VitePWA } from "vite-plugin-pwa";
 import { createHtmlPlugin } from "vite-plugin-html";
 import react from "@vitejs/plugin-react";
-import xrsdkPlugin from "@webspatial/react-plugin-vite";
+import WebSpatial from "@webspatial/react-plugin-vite";
 
 dotenv.config();
 
@@ -11,7 +11,7 @@ dotenv.config();
 export default defineConfig({
   plugins: [
     react(),
-    xrsdkPlugin(),
+    WebSpatial(),
     VitePWA({
       registerType: "prompt",
       includeAssets: [
