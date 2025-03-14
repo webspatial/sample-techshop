@@ -90,7 +90,7 @@ Step 1: clone the WebSpatial SDK source code
 git clone git@github.com:webspatial/webspatial-sdk.git
 ```
 
-Step 2: change XRSDKBaseDir value in file 'internal.vite.config.ts'
+Step 2: change XRSDKBaseDir value in file '.env' file generated in step 1
 
 ```bash
 const XRSDKBaseDir = "/path/to/your/XRSDK/";
