@@ -3,6 +3,8 @@ import ProductCard from "../components/ProductCard";
 import { Product } from "../types";
 import productsData from "../data/products.json";
 
+import { SpatialMonitor } from '@webspatial/react-sdk'
+
 const ProductList: FC = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>("");
@@ -32,7 +34,7 @@ const ProductList: FC = () => {
   });
 
   return (
-    <div className="py-8">
+    <div className="py-8" enable-xr debugName="product-list">
       <h1 className="list-title text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">
         Our Products
       </h1>
@@ -138,11 +140,13 @@ const ProductList: FC = () => {
             </ul>
           </div>
         </div>
+       
+         
 
         {/* 商品网格 */}
         <div className="flex-1">
-          <div className={"auto-fill-grid" + " gap-4 sm:gap-6"}>
-            {filteredProducts.length > 0 ? (
+          <SpatialMonitor className={"auto-fill-grid" + " gap-4 sm:gap-6"}>
+           {filteredProducts.length > 0 ? (
               filteredProducts.map(product => (
                 <ProductCard key={product.id} product={product} />
               ))
@@ -162,7 +166,7 @@ const ProductList: FC = () => {
                 </button>
               </div>
             )}
-          </div>
+          </SpatialMonitor>
         </div>
       </div>
     </div>

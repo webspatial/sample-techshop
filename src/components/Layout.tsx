@@ -18,8 +18,8 @@ const Layout: FC<LayoutProps> = ({ children }) => {
     <div className="flex flex-col min-h-screen w-full">
       {shouldShowGlobalUI && <Navbar />}
       <main
-        debugName="main"
-        enable-xr
+        // debugName="main"
+        // enable-xr
         className="flex-grow w-full bg-gray-50 main-window"
       >
         <div className="w-full px-4">{children}</div>
