@@ -178,12 +178,6 @@ html.is-spatial {
     --xr-background-material: translucent;
   }
 
-  .product-detail {
-    --xr-background-material: translucent;
-    background: #fff;
-    padding: 100px;
-  }
-
   .product-title {
     @apply text-gray-100;
   }
@@ -195,6 +189,26 @@ html.is-spatial {
   }
   .product-description {
     @apply text-gray-900;
+  }
+
+  .product-detail {
+    background: none;
+    /* --xr-background-material: translucent; */
+  }
+
+  .product-detail-info {
+    --xr-background-material: translucent;
+    border-radius: 50px;
+    padding: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    --xr-back: 20;
+    margin: auto;
+    width: 400px;
+    transform-origin: top right;
+    transform: translateZ(420px) rotateY(-90deg);
   }
 }
 

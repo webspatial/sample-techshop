@@ -90,7 +90,9 @@ const ProductDetail: FC = () => {
   }
 
   return (
-    <div className="product-detail py-6 sm:py-8" enable-xr>
+    <div
+      className={`product-detail ${process.env.XR_ENV !== "avp" ? "py-6 sm:py-8 max-w-7xl mx-auto" : ""}`}
+    >
       {/* 面包屑导航 */}
       <div className="text-sm text-gray-500 mb-6 sm:mb-8 overflow-x-auto whitespace-nowrap pb-2">
         <Link to="/" className="hover:text-indigo-600">
@@ -108,7 +110,9 @@ const ProductDetail: FC = () => {
         <span className="text-gray-800">{product.name}</span>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-6 sm:gap-8 mb-10 sm:mb-16">
+      <div
+        className={`flex flex-col md:flex-row gap-6 sm:gap-8 mb-10 sm:mb-16 ${process.env.XR_ENV !== "avp" ? "max-w-full" : ""}`}
+      >
         {/* 商品图片 - 左侧跟随页面宽度变化 */}
         <div className="bg-white rounded-lg overflow-hidden shadow-md md:flex-1">
           <img
@@ -120,7 +124,10 @@ const ProductDetail: FC = () => {
         </div>
 
         {/* 商品信息 - 右侧固定宽度 */}
-        <div className="flex flex-col w-full md:w-auto md:max-w-md lg:max-w-lg">
+        <div
+          enable-xr
+          className={`product-detail-info ${process.env.XR_ENV !== "avp" ? "flex flex-col w-full md:w-auto md:max-w-md lg:max-w-lg" : ""}`}
+        >
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-3 sm:mb-4">
             {product.name}
           </h1>
@@ -236,7 +243,9 @@ const ProductDetail: FC = () => {
           <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
             Related Products
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+          <div
+            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 ${process.env.XR_ENV !== "avp" ? "max-w-full" : ""}`}
+          >
             {relatedProducts.map(relatedProduct => (
               <div key={relatedProduct.id} className="product-card">
                 <div className="relative overflow-hidden">
