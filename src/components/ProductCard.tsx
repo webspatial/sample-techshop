@@ -25,8 +25,8 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
               return {
                 ...prevConfig,
                 defaultSize: {
-                  width: 1000,
-                  height: 800,
+                  width: 1500,
+                  height: 1100,
                 },
               };
             });

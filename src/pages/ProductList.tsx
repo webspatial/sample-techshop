@@ -140,7 +140,7 @@ const ProductList: FC = () => {
         </div>
 
         {/* 商品网格 */}
-        <div className="flex-1">
+        <div enable-xr-monitor className="flex-1">
           <div className={"auto-fill-grid" + " gap-4 sm:gap-6"}>
             {filteredProducts.length > 0 ? (
               filteredProducts.map(product => (
