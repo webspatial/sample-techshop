@@ -32,7 +32,7 @@ const ProductList: FC = () => {
   });
 
   return (
-    <div className="py-8">
+    <div className="py-8" enable-xr>
       <h1 className="list-title text-2xl sm:text-3xl font-bold text-gray-800 mb-6 sm:mb-8">
         Our Products
       </h1>
