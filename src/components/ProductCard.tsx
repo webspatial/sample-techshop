@@ -3,6 +3,9 @@ import { Product } from "../types";
 import { Link } from "react-router-dom";
 import { initScene } from "@webspatial/react-sdk";
 
+const basename =
+  (process.env.XR_ENV && `/webspatial/${process.env.XR_ENV}`) || "";
+
 interface ProductCardProps {
   product: Product;
 }
@@ -30,7 +33,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
                 },
               };
             });
-            window.open(`/product/${product.id}`, "detailScene");
+            window.open(`${basename}/product/${product.id}`, "detailScene");
           }}
         />
       </div>

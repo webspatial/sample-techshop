@@ -1,11 +1,10 @@
 {
-  "id": "http://webspatial.mytechshop.com",
   "name": "TechShop - Premium Tech Products",
   "short_name": "TechShop",
   "description": "Shop for premium tech products online",
-  "start_url": "index.avp.html",
+  "start_url": "/",
   "scope": "/",
-  "display": "standalone",
+  "display": "minimal-ui",
   "xr_main_scene": {
     "default_size": {
       "width": 1700,

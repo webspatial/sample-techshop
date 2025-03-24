@@ -7,16 +7,17 @@
     "install:clean": "rm -rf node_modules && pnpm install",
     "install:update": "rm -rf node_modules pnpm-lock.yaml && pnpm install",
     "dev": "vite",
+    "dev:avp": "XR_ENV=avp vite",
+    "dev:internal": "XR_ENV=avp vite --config internal.vite.config.ts ",
+    "dev:all": "concurrently \"pnpm dev\" \"pnpm dev:avp\" ",
     "build": "vite build && XR_ENV=avp vite build",
     "preview": "vite preview",
     "lint": "eslint .",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
-    "run:avp": "dotenv -- webspatial-builder dev --manifest=public/manifest.webspatial.dev.json",
-    "run:all": "concurrently \"XR_ENV=avp pnpm dev\"  \"pnpm dev:avp \" ",
-    "build:avp": "dotenv -- sh -c 'webspatial-builder build --manifest=public/manifest.webspatial.prod.json --project=dist --export=build/ --teamId=$XR_TEAM_ID'",
-    "publish:avp": "dotenv -- sh -c 'webspatial-builder publish --manifest=public/manifest.webspatial.prod.json --project=dist --teamId=$XR_TEAM_ID --version=$XR_VERSION --u=$XR_DEV_NAME --p=$XR_DEV_PASSWORD'",
-    "dev:internal": "XR_ENV=avp vite --config internal.vite.config.ts ",
+    "run:avp": "dotenv -- sh -c 'webspatial-builder run --base=$XR_DEV_SERVER'",
+    "build:avp": "dotenv -- sh -c 'webspatial-builder build --base=$XR_PRE_SERVER --bundle-id=$XR_BUNDLE_ID --teamId=$XR_TEAM_ID'",
+    "publish:avp": "dotenv -- sh -c 'webspatial-builder publish  --base=$XR_PROD_SERVER --bundle-id=$XR_BUNDLE_ID --teamId=$XR_TEAM_ID --version=$XR_VERSION --u=$XR_DEV_NAME --p=$XR_DEV_PASSWORD'",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -30,9 +31,8 @@
   },
   "dependencies": {
     "@google/model-viewer": "4.0.0",
-    "@webspatial/core-sdk": "^0.0.2",
-    "@webspatial/react-plugin-vite": "^0.0.1",
-    "@webspatial/react-sdk": "^0.0.12",
+    "@webspatial/core-sdk": "^0.0.3",
+    "@webspatial/react-sdk": "^0.0.15",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
@@ -43,8 +43,9 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
-    "@webspatial/builder": "^0.0.10",
-    "@webspatial/platform-avp": "^0.0.2",
+    "@webspatial/builder": "^0.0.17",
+    "@webspatial/platform-visionos": "^0.0.2",
+    "@webspatial/react-plugin-vite": "^0.0.3-alpha.0",
     "autoprefixer": "^10.4.20",
     "concurrently": "^8.2.2",
     "dotenv": "^16.4.7",
@@ -62,7 +63,7 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
-    "vite-plugin-html": "^3.2.2",
-    "vite-plugin-pwa": "^0.21.1"
-  }
+    "vite-plugin-html": "^3.2.2"
+  },
+  "packageManager": "pnpm@10.6.4+sha512.da3d715bfd22a9a105e6e8088cfc7826699332ded60c423b14ec613a185f1602206702ff0fe4c438cb15c979081ce4cb02568e364b15174503a63c7a8e2a5f6c"
 }

@@ -16,59 +16,77 @@ Install the following tools globally:
 2. visionOS simulator
 <!-- 3. `pnpm add -g @webspatial/builder` -->
 
-## Development
-
-### For desktop/mobile platforms
-
-```bash
-pnpm dev
-```
-
-> Ensure the environment variable `XR_ENV` is empty when running this devserver
-
-### For Vision Pro
-
-Option A: open two terminals and run these two commands in each one:
-
-```bash
-XR_ENV=avp pnpm dev
-```
-
-> This environment-variable-enabled devserver can coexist with the devserver for desktop/mobile, using different ports automatically.
-
-```bash
-npm run dev:avp
-```
-
-Option B: open one terminal and run this all-in-one command:
-
-```bash
-npm run dev:all
-```
-
-## Distribution
-
-### For desktop/mobile platforms
-
-```bash
-pnpm build
-```
-
-### For Vision Pro
-
-Step 1:
+Then, create a `.env` file:
 
 ```bash
 cp .env.example .env
 ```
 
-Fill in the Team ID, Username and Password for Apple Developer Program in the .env file.
+## Development
 
-Step 2:
+### Only For Desktop/Mobile Platforms
+
+```bash
+pnpm dev
+```
+
+> Ensure the environment variable `XR_ENV` is empty when running this dev server
+
+### For Both Desktop/Mobile Platforms and visionOS
+
+#### Step 1: Web Builder
+
+Option A: open two terminals and run these two commands in each one:
+
+```bash
+pnpm dev
+```
+
+```bash
+pnpm dev:avp
+```
+
+> This environment-variable-enabled devserver can coexist with the devserver for desktop/mobile, using different ports and base automatically.
+
+Option B: open one terminal and run this all-in-one command:
+
+```bash
+pnpm dev:all
+```
+
+#### Step 2: WebSpatial Builder
+
+Fill in the `$XR_DEV_SERVER` in the .env file.
+
+```
+XR_DEV_SERVER=http://localhost:[port from `pnpm dev:avp`]/webspatial/avp/
+XR_PRE_SERVER=
+XR_PROD_SERVER=
+```
+
+Then:
+
+```bash
+pnpm run:avp
+```
+
+## Distribution
+
+### Only For Desktop/Mobile Platforms
 
 ```bash
 pnpm build
 ```
+
+### For Both Desktop/Mobile Platforms and visionOS
+
+Step 1:
+
+```bash
+pnpm build
+```
+
+Step 2: fill in the Bundle ID, Team ID, Username and Password for Apple Developer Program in the .env file.
 
 Step 3:
 
@@ -76,57 +94,14 @@ Step 3:
 pnpm build:avp
 ```
 
-Or
+Step 4: fill in the Version, Username and Password for Apple Developer Program in the .env file.
+
+Step 5:
 
 ```bash
 pnpm publish:avp
 ```
 
-## How to debug using WebSpatial SDK source code
+# How to debug using WebSpatial SDK source code
 
-Step 1: clone the WebSpatial SDK source code
-
-```bash
-git clone git@github.com:webspatial/webspatial-sdk.git
-```
-
-Step 2: change XRSDKBaseDir value in file '.env' file generated in step 1
-
-```bash
-const XRSDKBaseDir = "/path/to/your/XRSDK/";
-
-```
-
-Step 3: run the following command to start web project
-
-```bash
-npm run dev:internal
-```
-
-now you visit http://localhost:5201/ in you browser
-
-Step 4: open XCode project in WebSpatial SDK source code, which is located in
-
-```bash
-YOUR_XRSDK/cli/template/visionOSApp
-```
-
-Step 5: change entry page of your project in XCode project
-
-```bash
-File:
-YOUR_XRSDK/cli/template/visionOSApp/web-spatial/libs/webView/manifest.swift
-
-Line 8
-
-
-Change start_url
-var start_url: String = "http://localhost:5201/"
-```
-
-Step 6
-run you XCode project, it will open your web project in XCode simulator
-
-Step 7: you can change your webspatial SDK source to see the effect immediately
-
-Note: don't run npm run dev:avp, use npm run dev:internal instead
+See [Debug with SDK source code](./debug.md)
