@@ -8,12 +8,9 @@ import "./index.css";
 
 // enableDebugTool();
 
-const basename =
-  (process.env.XR_ENV && `/webspatial/${process.env.XR_ENV}`) || "";
-
 function App() {
   return (
-    <Router basename={basename}>
+    <Router basename={__XR_ENV_BASE__}>
       <Layout>
         <Routes>
           <Route path="/" element={<ProductList />} />

@@ -11,8 +11,8 @@ interface LayoutProps {
 const Layout: FC<LayoutProps> = ({ children }) => {
   const location = useLocation();
   const isStartUrl = location.pathname === "/";
-  const shouldShowGlobalUI = process.env.XR_ENV !== "avp" || isStartUrl;
-  const isAvpEnv = process.env.XR_ENV === "avp";
+  const shouldShowGlobalUI = import.meta.env.XR_ENV !== "avp" || isStartUrl;
+  const isAvpEnv = import.meta.env.XR_ENV === "avp";
 
   return (
     <div className="flex flex-col min-h-screen w-full">

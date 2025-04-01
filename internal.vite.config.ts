@@ -1,13 +1,12 @@
-import { defineConfig, Plugin } from "vite";
-import dotenv from "dotenv";
+import { defineConfig, Plugin, loadEnv } from "vite";
 import baseConfig from "./vite.config";
 import merge from "lodash/merge";
 import path from "path";
 import tsconfig from "./tsconfig.app.json";
 
-dotenv.config();
+const env = loadEnv("", process.cwd(), "");
 
-const XRSDKBaseDir = process.env.XRSDK_BASE_DIR;
+const XRSDKBaseDir = env.XRSDK_BASE_DIR;
 if (!XRSDKBaseDir) {
   throw new Error("XRSDK_BASE_DIR is not set in `.env` file");
 }

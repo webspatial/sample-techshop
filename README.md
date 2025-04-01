@@ -16,10 +16,10 @@ Install the following tools globally:
 2. visionOS simulator
 <!-- 3. `pnpm add -g @webspatial/builder` -->
 
-Then, create a `.env` file:
+Then, create a `.env.local` file:
 
 ```bash
-cp .env.example .env
+cp .env.example .env.local
 ```
 
 ## Development
@@ -56,7 +56,7 @@ pnpm dev:all
 
 #### Step 2: WebSpatial Builder
 
-Fill in the `$XR_DEV_SERVER` in the .env file.
+Fill in the `$XR_DEV_SERVER` in the .env.local file.
 
 ```
 XR_DEV_SERVER=http://localhost:[port from `pnpm dev:avp`]/webspatial/avp/
@@ -86,7 +86,7 @@ Step 1:
 pnpm build
 ```
 
-Step 2: fill in the Bundle ID, Team ID, Username and Password for Apple Developer Program in the .env file.
+Step 2: fill in the Bundle ID, Team ID, Username and Password for Apple Developer Program in the .env.local file.
 
 Step 3:
 
@@ -94,7 +94,7 @@ Step 3:
 pnpm build:avp
 ```
 
-Step 4: fill in the Version, Username and Password for Apple Developer Program in the .env file.
+Step 4: fill in the Version, Username and Password for Apple Developer Program in the .env.local file.
 
 Step 5:
 

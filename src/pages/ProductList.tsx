@@ -78,7 +78,7 @@ const ProductList: FC = () => {
                 <button
                   enable-xr
                   style={
-                    process.env.XR_ENV === "avp"
+                    import.meta.env.XR_ENV === "avp"
                       ? selectedCategory === ""
                         ? {
                             "--xr-background-material": "thin",
@@ -89,7 +89,7 @@ const ProductList: FC = () => {
                       : {}
                   }
                   className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
-                    process.env.XR_ENV === "avp"
+                    import.meta.env.XR_ENV === "avp"
                       ? selectedCategory === ""
                         ? "text-gray-100"
                         : "text-gray-900"
@@ -109,7 +109,7 @@ const ProductList: FC = () => {
                       <button
                         enable-xr
                         style={
-                          process.env.XR_ENV === "avp"
+                          import.meta.env.XR_ENV === "avp"
                             ? selectedCategory === category
                               ? {
                                   "--xr-background-material": "thin",
@@ -120,7 +120,7 @@ const ProductList: FC = () => {
                             : {}
                         }
                         className={`w-full text-left px-3 py-2 rounded-md transition-colors ${
-                          process.env.XR_ENV === "avp"
+                          import.meta.env.XR_ENV === "avp"
                             ? selectedCategory === category
                               ? "text-gray-100"
                               : "text-gray-900"

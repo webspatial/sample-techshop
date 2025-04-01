@@ -13,7 +13,8 @@ const Navbar: FC = () => {
       enable-xr
       debugName="navbar"
       className={
-        "" + (process.env.XR_ENV !== "avp" ? "bg-indigo-600 w-full" : "navbar")
+        "" +
+        (import.meta.env.XR_ENV !== "avp" ? "bg-indigo-600 w-full" : "navbar")
       }
     >
       <div className="w-full px-6 sm:px-8 md:px-12 py-3">
