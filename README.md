@@ -1,4 +1,4 @@
-# TechShop Demo
+# TechShop Demo for WebSpatial
 
 Demo for the full process and final use of WebSpatial
 
