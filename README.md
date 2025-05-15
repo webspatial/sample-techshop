@@ -1,6 +1,16 @@
 # TechShop Demo for WebSpatial
 
-Demo for the full process and final use of WebSpatial
+<div align="center">
+  <img src="assets/logo.png" alt="WebSpatial Logo" width="400"/>
+</div>
+
+<div align="center" style="width: 100%; max-width: 860px;">
+  <img src="assets/techshop-desktop.png" alt="TechShop Desktop" width="800"/>
+  <img src="assets/techshop-small.png" alt="TechShop Small" width="120"/>
+  <img src="assets/techshop-phone.png" alt="TechShop Phone" width="120"/>
+  <img src="assets/techshop-pad.png" alt="TechShop Pad" width="210"/>
+  <img src="assets/techshop-spatial.png" alt="TechShop Spatial" width="800"/>
+</div>
 
 ## Setup
 
@@ -34,7 +44,7 @@ pnpm dev
 
 ### For Both Desktop/Mobile Platforms and visionOS
 
-#### Step 1: Web Builder
+#### Step 1: Web Build Tool
 
 Option A: open two terminals and run these two commands in each one:
 
@@ -58,7 +68,7 @@ pnpm dev:all
 
 Fill in the `$XR_DEV_SERVER` in the .env.local file.
 
-```
+```bash
 XR_DEV_SERVER=http://localhost:[port from `pnpm dev:avp`]/webspatial/avp/
 XR_PRE_SERVER=
 XR_PROD_SERVER=
@@ -70,38 +80,10 @@ Then:
 pnpm run:avp
 ```
 
-## Distribution
+## WebSpatial Documentation
 
-### Only For Desktop/Mobile Platforms
-
-```bash
-pnpm build
-```
-
-### For Both Desktop/Mobile Platforms and visionOS
-
-Step 1:
-
-```bash
-pnpm build
-```
-
-Step 2: fill in the Bundle ID, Team ID, Username and Password for Apple Developer Program in the .env.local file.
-
-Step 3:
-
-```bash
-pnpm build:avp
-```
-
-Step 4: fill in the Version, Username and Password for Apple Developer Program in the .env.local file.
-
-Step 5:
-
-```bash
-pnpm publish:avp
-```
-
-# How to debug using WebSpatial SDK source code
-
-See [Debug with SDK source code](./debug.md)
+- [Table of Contents](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/README.md)
+- [Introduction](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/introduction/README.md)
+- [Quick Start](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/quick-start/README.md)
+- [Core Concepts](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/core-concepts/README.md)
+- [Development Guide](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/development-guide/README.md)
