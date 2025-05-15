@@ -1,8 +1,8 @@
-# TechShop Demo for WebSpatial
-
 <div align="center">
   <img src="assets/logo.png" alt="WebSpatial Logo" width="400"/>
 </div>
+
+# TechShop Demo for WebSpatial
 
 <div align="center" style="width: 100%; max-width: 860px;">
   <img src="assets/techshop-desktop.png" alt="TechShop Desktop" width="800"/>
