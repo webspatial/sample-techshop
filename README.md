@@ -1,16 +1,35 @@
 <div align="center">
   <img src="assets/logo.png" alt="WebSpatial Logo" width="400"/>
+
+Make the Web Spatial Too
+
 </div>
 
 # TechShop Demo for WebSpatial
 
-<div align="center" style="width: 100%; max-width: 860px;">
-  <img src="assets/techshop-desktop.png" alt="TechShop Desktop" width="800"/>
-  <img src="assets/techshop-small.png" alt="TechShop Small" width="120"/>
-  <img src="assets/techshop-phone.png" alt="TechShop Phone" width="120"/>
-  <img src="assets/techshop-pad.png" alt="TechShop Pad" width="210"/>
-  <img src="assets/techshop-spatial.png" alt="TechShop Spatial" width="800"/>
-</div>
+This demo explores and showcases the possibilities of spatializing a real-world e-commerce site’s GUI.
+
+![](assets/techshop-near.png)
+
+|           Large Screen           |          Small Window          |
+| :------------------------------: | :----------------------------: |
+| ![](assets/techshop-desktop.png) | ![](assets/techshop-small.png) |
+
+|             Phone              |            Tablet            |
+| :----------------------------: | :--------------------------: |
+| ![](assets/techshop-phone.png) | ![](assets/techshop-pad.png) |
+
+|         visionOS Safari         |            WebSpatial            |
+| :-----------------------------: | :------------------------------: |
+| ![](assets/techshop-safari.png) | ![](assets/techshop-spatial.png) |
+
+## WebSpatial Documentation
+
+- [Table of Contents](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/README.md)
+- [Introduction](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/introduction/README.md)
+- [Quick Start](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/quick-start/README.md)
+- [Core Concepts](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/core-concepts/README.md)
+- [Development Guide](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/development-guide/README.md)
 
 ## Setup
 
@@ -79,11 +98,3 @@ Then:
 ```bash
 pnpm run:avp
 ```
-
-## WebSpatial Documentation
-
-- [Table of Contents](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/README.md)
-- [Introduction](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/introduction/README.md)
-- [Quick Start](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/quick-start/README.md)
-- [Core Concepts](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/core-concepts/README.md)
-- [Development Guide](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/development-guide/README.md)
