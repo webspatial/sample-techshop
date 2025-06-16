@@ -25,11 +25,11 @@ This demo explores and showcases the possibilities of spatializing a real-world 
 
 ## WebSpatial Documentation
 
-- [Table of Contents](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/README.md)
-- [Introduction](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/introduction/README.md)
-- [Quick Start](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/quick-start/README.md)
-- [Core Concepts](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/core-concepts/README.md)
-- [Development Guide](https://github.com/webspatial/webspatial-sdk/blob/main/docs/en/development-guide/README.md)
+- [Table of Contents](https://webspatial.dev/docs)
+- [Introduction](https://webspatial.dev/docs/introduction)
+- [Quick Example](https://webspatial.dev/docs/quick-example)
+- [Core Concepts](https://webspatial.dev/docs/core-concepts)
+- [Development Guide](https://webspatial.dev/docs/development-guide)
 
 ## Setup
 
